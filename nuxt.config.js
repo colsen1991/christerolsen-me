@@ -28,12 +28,10 @@ module.exports = {
     },
     extractCSS: true,
     vendor: [
-      'buefy',
       'whatwg-fetch'
     ]
   },
   plugins: [
-    './plugins/buefy',
     './plugins/components'
   ],
   head: {

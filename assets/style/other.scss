@@ -24,9 +24,9 @@ $blue: hsl(217, 71%,  53%);
 $purple: hsl(271, 100%, 71%);
 $red: hsl(348, 100%, 61%);
 
-$primary: $turquoise;
+$primary: $black-ter;
 
-$info: $blue;
+$info: $turquoise;
 $success: $green;
 $warning: $yellow;
 $danger: $red;
@@ -62,4 +62,3 @@ $dark: $grey-darker;
 /* ... and here */
 
 @import "~bulma";
-@import "~buefy/src/scss/buefy";

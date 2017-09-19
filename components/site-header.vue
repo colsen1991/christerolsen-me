@@ -1,47 +1,42 @@
 <template>
-  <header class="navbar section">
-    <div class="container">
-      <div class="navbar-brand">
-        <nuxt-link class="navbar-item" to="/">
-          <img aria-label="Logo" alt="Site Logo" src="~/assets/img/logo.png">
-        </nuxt-link>
+  <div class="hero-head is-info">
+    <header class="nav">
+      <div class="container">
+        <div class="nav-left">
+          <a class="nav-item">
+            <img src="~/assets/img/logo-full.png" alt="Logo">
+          </a>
+        </div>
 
-        <div
-          class="navbar-burger burger"
-          :class="{'is-active': showNavbarMenu}"
-          @click="toggleNavbarMenu"
-          @keydown.enter="toggleNavbarMenu"
-          role="button"
-          tabindex="0"
-          :title="`${showNavbarMenu ? 'Skjul' : 'Vis'} navigasjonsmeny`">
+        <span class="nav-toggle"
+              :class="{'is-active': showNavbarMenu}"
+              @click="toggleNavbarMenu"
+              @keydown.enter="toggleNavbarMenu"
+              role="button"
+              tabindex="0"
+              :title="`${showNavbarMenu ? 'Skjul' : 'Vis'} navigasjonsmeny`">
           <span></span>
           <span></span>
           <span></span>
+        </span>
+
+        <div class="nav-right nav-menu"
+             :class="{'is-active': showNavbarMenu}"
+             @click="hideNavbarMenu"
+             @keypress.enter="hideNavbarMenu">
+          <a class="nav-item">
+            Home
+          </a>
+          <a class="nav-item">
+            Examples
+          </a>
+          <a class="nav-item">
+            Documentation
+          </a>
         </div>
       </div>
-
-      <div class="navbar-menu"
-           :class="{'is-active': showNavbarMenu}"
-           @click="hideNavbarMenu"
-           @keypress.enter="hideNavbarMenu">
-        <nav class="navbar-end">
-          <div class="navbar-item has-dropdown is-hoverable">
-            <nuxt-link to="#lorem" class="navbar-link">
-              <b-icon icon="cogs"></b-icon>&nbsp;LOREM
-            </nuxt-link>
-
-            <div class="navbar-dropdown">
-              <nuxt-link to="#ipsum" class="navbar-item">Ipsum</nuxt-link>
-              <nuxt-link to="#dolor" class="navbar-item">Dolor</nuxt-link>
-            </div>
-          </div>
-          <nuxt-link to="#sit" class="navbar-item">
-            <b-icon icon="folder-open"></b-icon>&nbsp;SIT
-          </nuxt-link>
-        </nav>
-      </div>
-    </div>
-  </header>
+    </header>
+  </div>
 </template>
 
 <script>
