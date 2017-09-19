@@ -1,0 +1,9 @@
+/* TEAM */
+Your title: .
+Location: .
+Site: https://www.christerolsen.me
+
+/* SITE */
+Last update: 2042/12/24
+Standards: HTML5, CSS3, JavaScript.
+Software: git, node, npm, vue, nuxt.

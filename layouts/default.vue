@@ -1,0 +1,9 @@
+<template>
+  <div>
+    <site-header/>
+    <main>
+      <nuxt/>
+    </main>
+    <site-footer/>
+  </div>
+</template>

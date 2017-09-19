@@ -1,0 +1,44 @@
+{
+  "name": "christerolsen-me",
+  "version": "1.0.0",
+  "description": "Homepage for myself",
+  "author": "Christer Olsen <colsen1991@gmail.com> (https://www.christerolsen.me)",
+  "private": true,
+  "scripts": {
+    "predev": "npm run dato",
+    "dev": "nuxt",
+    "prebuild": "npm run dato",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "pregenerate": "npm run dato",
+    "generate": "cross-env STATIC=true nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint",
+    "dato": "dato dump --token=87241c2dd4d705044ef13affb8841f",
+    "postdato": "rimraf dist && mkdir dist && ncp static/data dist/data"
+  },
+  "dependencies": {
+    "@nuxtjs/pwa": "^0.2.1",
+    "buefy": "^0.5.2",
+    "nuxt": "^1.0.0-rc11",
+    "whatwg-fetch": "^2.0.3"
+  },
+  "devDependencies": {
+    "@nuxtjs/sitemap": "^0.0.3",
+    "babel-eslint": "^8.0.0",
+    "cross-env": "^5.0.5",
+    "datocms-client": "^0.3.27",
+    "eslint": "^4.6.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-html": "^3.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "ncp": "^2.0.0",
+    "node-sass": "^4.5.3",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^6.0.6"
+  }
+}
