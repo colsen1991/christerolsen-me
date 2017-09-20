@@ -1,11 +1,11 @@
 <template>
-  <div class="hero-head is-info">
+  <div class="hero-head">
     <header class="nav">
       <div class="container">
         <div class="nav-left">
-          <a class="nav-item">
-            <img src="~/assets/img/logo-full.png" alt="Logo">
-          </a>
+          <nuxt-link to="/" class="nav-item">
+            <img src="~/assets/img/logo-full.png" class="has-text-primary" alt="Christer Olsen" title="Logo - Christer Olsen">
+          </nuxt-link>
         </div>
 
         <span class="nav-toggle"
@@ -15,7 +15,7 @@
               role="button"
               tabindex="0"
               :title="`${showNavbarMenu ? 'Skjul' : 'Vis'} navigasjonsmeny`">
-          <span></span>
+          <span class="is-info"></span>
           <span></span>
           <span></span>
         </span>
@@ -24,15 +24,12 @@
              :class="{'is-active': showNavbarMenu}"
              @click="hideNavbarMenu"
              @keypress.enter="hideNavbarMenu">
-          <a class="nav-item">
+          <nuxt-link to="/" class="has-text-primary nav-item">
             Home
-          </a>
-          <a class="nav-item">
-            Examples
-          </a>
-          <a class="nav-item">
-            Documentation
-          </a>
+          </nuxt-link>
+          <nuxt-link to="/blog" class="has-text-primary nav-item">
+            Blog
+          </nuxt-link>
         </div>
       </div>
     </header>
@@ -40,7 +37,10 @@
 </template>
 
 <script>
+  import NuxtLink from '../.nuxt/components/nuxt-link'
+
   export default {
+    components: { NuxtLink },
     name: 'site-header',
     data () {
       return {

@@ -1,7 +1,5 @@
 @import "~bulma/sass/utilities/initial-variables.sass";
 
-/* Customization goes between here... */
-
 $black: hsl(0, 0%, 4%);
 $black-bis: hsl(0, 0%, 7%);
 $black-ter: hsl(0, 0%, 14%);
@@ -16,17 +14,17 @@ $white-ter: hsl(0, 0%, 96%);
 $white-bis: hsl(0, 0%, 98%);
 $white: hsl(0, 0%, 100%);
 
-$orange: hsl(14,  100%, 53%);
-$yellow: hsl(48,  100%, 67%);
-$green: hsl(141, 71%,  48%);
+$orange: hsl(14, 100%, 53%);
+$yellow: hsl(48, 100%, 67%);
+$green: hsl(141, 71%, 48%);
 $turquoise: hsl(171, 100%, 41%);
-$blue: hsl(217, 71%,  53%);
+$blue: hsl(217, 71%, 53%);
 $purple: hsl(271, 100%, 71%);
 $red: hsl(348, 100%, 61%);
 
-$primary: $black-ter;
+$primary: $turquoise;
 
-$info: $turquoise;
+$info: $purple;
 $success: $green;
 $warning: $yellow;
 $danger: $red;
@@ -34,24 +32,29 @@ $danger: $red;
 $light: $white-ter;
 $dark: $grey-darker;
 
+.image.is-max-384x384 {
+  max-width: 384px;
+  max-height: 384px;
+}
+
 .tags.is-marginless .tag {
   margin-bottom: 0 !important;
 }
 
-/* ... and here */
+.is-flex.has-centered {
+  align-items: center !important;
+  justify-content: center !important;
+}
 
-
-/* Additions goes between here... */
-
-.icon.inherit-font-size .fa {
-  font-size: inherit !important;
+.is-flex.direction-column {
+  flex-direction: column;
 }
 
 @media screen and (max-width: 768px) {
   /* Has/is * mobile */
 }
 
-@media screen and (min-width: 769px), print {
+@media screen and (min-width: 769px) {
   /* Has/is * tablet */
 }
 
@@ -59,6 +62,12 @@ $dark: $grey-darker;
   /* Has/is * desktop */
 }
 
-/* ... and here */
+@media screen and (min-width: 1408px) {
+  .image.is-max-256x256-fullhd {
+    max-width: 256px;
+    max-height: 256px;
+  }
+  /* Has/is * fullhd */
+}
 
 @import "~bulma";

@@ -1,5 +1,5 @@
 <template>
-  <div class="hero is-primary is-fullheight">
+  <div class="hero is-dark is-fullheight">
     <site-header/>
     <main>
       <nuxt/>
