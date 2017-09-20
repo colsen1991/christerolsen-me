@@ -14,7 +14,8 @@ module.exports = {
     display: 'standalone',
     description: 'Christer Olsen is a freelance web developer from Norway.',
     orientation: 'any',
-    theme_color: '#fff'
+    theme_color: '#00bd7f',
+    background_color: '#363636'
   },
   modules: [
     '@nuxtjs/pwa',
@@ -26,10 +27,7 @@ module.exports = {
         'postcss-custom-properties': false
       }
     },
-    extractCSS: true,
-    vendor: [
-      'whatwg-fetch'
-    ]
+    extractCSS: true
   },
   plugins: [
     './plugins/components'
@@ -46,7 +44,7 @@ module.exports = {
     meta: [
       { name: 'title', content: 'Christer Olsen: Web Developer' },
       { name: 'description', content: 'Christer Olsen is a freelance web developer from Norway.' },
-      { name: 'theme-color', content: '#fff' },
+      { name: 'theme-color', content: '#00bd7f' },
       { property: 'og:title', content: 'Christer Olsen: Web Developer' },
       { property: 'og:description', content: 'Christer Olsen is a freelance web developer from Norway.' },
       { property: 'og:type', content: 'website' },

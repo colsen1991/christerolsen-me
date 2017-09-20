@@ -5,12 +5,12 @@
   "author": "Christer Olsen <colsen1991@gmail.com> (https://www.christerolsen.me)",
   "private": true,
   "scripts": {
-    "predev": "npm run dato",
+    "_predev": "npm run dato",
     "dev": "nuxt",
-    "prebuild": "npm run dato",
+    "_prebuild": "npm run dato",
     "build": "nuxt build",
     "start": "nuxt start",
-    "pregenerate": "npm run dato",
+    "_pregenerate": "npm run dato",
     "generate": "cross-env STATIC=true nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
@@ -19,12 +19,11 @@
   },
   "dependencies": {
     "@nuxtjs/pwa": "^0.2.1",
+    "@nuxtjs/sitemap": "^0.0.3",
     "bulma": "^0.5.2",
-    "nuxt": "^1.0.0-rc11",
-    "whatwg-fetch": "^2.0.3"
+    "nuxt": "^1.0.0-rc11"
   },
   "devDependencies": {
-    "@nuxtjs/sitemap": "^0.0.3",
     "babel-eslint": "^8.0.0",
     "cross-env": "^5.0.5",
     "datocms-client": "^0.3.27",
