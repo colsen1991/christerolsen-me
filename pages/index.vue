@@ -32,7 +32,7 @@
               Sounds interesting, or just feeling lonely? Then let's talk! Contact info in the footer!
             </p>
             <p>
-              Oh, and if you've got nothing better to do; check out <span class="has-text-info">my gibberish</span>, a.k.a. blog!
+              Oh, and if you've got nothing better to do; check out my gibberish, a.k.a. blog!
             </p>
           </div>
         </div>
