@@ -12,9 +12,9 @@ module.exports = {
     name: 'Christer Olsen: Web Developer',
     short_name: 'CO: Webdev',
     display: 'standalone',
-    description: 'Christer Olsen is a freelance web developer from Norway.',
+    description: 'Christer Olsen is a web developer from Norway.',
     orientation: 'any',
-    theme_color: '#00bd7f',
+    theme_color: '#009f83',
     background_color: '#363636'
   },
   modules: [
@@ -34,19 +34,18 @@ module.exports = {
   ],
   head: {
     htmlAttrs: { lang: 'en_US' },
-    title: 'Forsiden',
-    titleTemplate: '%s - Christer Olsen: Web Developer',
+    title: 'Christer Olsen: Web Developer',
     link: [
-      { rel: 'favicon', href: '/favicon.ico' },
+      { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'author', href: '/humans.txt' },
       { rel: 'me', href: 'https://www.christerolsen.me', type: 'text/html' }
     ],
     meta: [
       { name: 'title', content: 'Christer Olsen: Web Developer' },
-      { name: 'description', content: 'Christer Olsen is a freelance web developer from Norway.' },
-      { name: 'theme-color', content: '#00bd7f' },
+      { name: 'description', content: 'Christer Olsen is a web developer from Norway.' },
+      { name: 'theme-color', content: '#009f83' },
       { property: 'og:title', content: 'Christer Olsen: Web Developer' },
-      { property: 'og:description', content: 'Christer Olsen is a freelance web developer from Norway.' },
+      { property: 'og:description', content: 'Christer Olsen is a web developer from Norway.' },
       { property: 'og:type', content: 'website' },
       { property: 'og:image', content: 'https://www.christerolsen.me/logo.png' },
       { property: 'og:locale', content: 'en_US' },

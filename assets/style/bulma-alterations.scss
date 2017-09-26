@@ -1,8 +1,13 @@
 @import "~bulma/sass/utilities/initial-variables.sass";
 
+$turquoise: hsl(171, 100%, 41%);
 $primary: $turquoise;
 
+$purple: hsl(271, 100%, 71%);
 $info: $purple;
+
+$gap: 24px;
+$desktop: 960px + (2 * $gap);
 
 .image.is-max-384x384 {
   max-width: 384px;
@@ -32,6 +37,9 @@ $info: $purple;
 
 @media screen and (min-width: 1008px) {
   /* Has/is * desktop */
+  .container {
+    max-width: $desktop !important;
+  }
 }
 
 @media screen and (min-width: 1408px) {

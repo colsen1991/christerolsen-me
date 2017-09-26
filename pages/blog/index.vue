@@ -1,20 +1,18 @@
 <template>
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <h1 class="title">Coming Sooooon</h1>
-      <p>(Or Soooonish)</p>
-    </div>
+  <div class="container has-text-centered">
+    <h1 class="title">Coming Sooooon</h1>
+    <p>(Or Soooonish)</p>
   </div>
 </template>
 
 <script>
   export default {
     head: {
-      title: 'Blog',
-      link: [ { rel: 'canonical', href: 'https://www.christerolsen.no/blogg' } ],
+      title: 'Blog - Christer Olsen: Web Developer',
+      link: [ { rel: 'canonical', href: 'https://www.christerolsen.me/blog' } ],
       meta: [
-        { name: 'title', content: 'Christer Olsen: Web Developer' },
-        { property: 'og:title', content: 'Christer Olsen: Web Developer' }
+        { name: 'title', content: 'Blog - Christer Olsen: Web Developer' },
+        { property: 'og:title', content: 'Blog - Christer Olsen: Web Developer' }
       ]
     }
   }

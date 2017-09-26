@@ -1,9 +1,13 @@
 <template>
   <div class="hero is-dark is-fullheight">
-    <site-header/>
-    <main>
+    <header class="hero-head">
+      <site-header/>
+    </header>
+    <main class="hero-body">
       <nuxt/>
     </main>
-    <site-footer/>
+    <footer class="hero-foot">
+      <site-footer/>
+    </footer>
   </div>
 </template>

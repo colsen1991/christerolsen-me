@@ -1,51 +1,49 @@
 <template>
-  <div class="hero-foot">
-    <footer class="section">
-      <div class="container">
+  <div class="section">
+    <div class="container">
 
-        <hr class="is-hidden-mobile">
+      <hr class="is-hidden-mobile">
 
-        <div class="columns">
+      <div class="columns">
 
-          <hr class="is-hidden-tablet">
+        <hr class="is-hidden-tablet">
 
-          <div class="column has-text-centered has-text-primary">
-            <a href="https://twitter.com/colsen1991" target="noopener">
-              Twitter
-            </a>&nbsp;
-            <a href="https://www.facebook.com/colsen1991" target="noopener">
-              Facebook
-            </a>&nbsp;
-            <a href="https://www.linkedin.com/in/christer-olsen-15845b53" target="noopener">
-              LinkedIn
-            </a><br>
-            <a href="https://github.com/colsen1991" target="noopener">
-              GitHub
-            </a>&nbsp;
-            <a href="mailto:colsen1991@gmail.com" target="noopener">
-              Email
-            </a>
-          </div>
+        <div class="column has-text-centered has-text-primary">
+          <a href="https://twitter.com/colsen1991" target="noopener">
+            Twitter
+          </a>&nbsp;
+          <a href="https://www.facebook.com/colsen1991" target="noopener">
+            Facebook
+          </a>&nbsp;
+          <a href="https://www.linkedin.com/in/christer-olsen-15845b53" target="noopener">
+            LinkedIn
+          </a><br>
+          <a href="https://github.com/colsen1991" target="noopener">
+            GitHub
+          </a>&nbsp;
+          <a href="mailto:colsen1991@gmail.com" target="noopener">
+            Email
+          </a>
+        </div>
 
-          <hr class="is-hidden-tablet">
+        <hr class="is-hidden-tablet">
 
-          <div class="column has-text-centered has-text-primary">
-            <nuxt-link to="/">Home</nuxt-link>
-            <br>
-            <nuxt-link to="/blog">Blog</nuxt-link>
-          </div>
+        <nav class="column has-text-centered has-text-primary">
+          <nuxt-link to="/">Home</nuxt-link>
+          <br>
+          <nuxt-link to="/blog">Blog</nuxt-link>
+        </nav>
 
-          <hr class="is-hidden-tablet">
+        <hr class="is-hidden-tablet">
 
-          <div class="column has-text-centered">
-            <p class="has-text-centered">
-              &copy; {{new Date().getFullYear()}}<br>
-              Christer Olsen
-            </p>
-          </div>
+        <div class="column has-text-centered">
+          <p class="has-text-centered">
+            &copy; {{new Date().getFullYear()}}<br>
+            Christer Olsen
+          </p>
         </div>
       </div>
-    </footer>
+    </div>
   </div>
 </template>
 
