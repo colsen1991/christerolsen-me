@@ -1,5 +1,7 @@
 const isStatic = !!process.env.STATIC
 
+const blogPosts = require('./static/data/blog.json')
+
 module.exports = {
   css: [
     { src: './assets/style/bulma-alterations.scss', lang: 'sass' },
@@ -27,10 +29,17 @@ module.exports = {
         'postcss-custom-properties': false
       }
     },
-    extractCSS: true
+    extractCSS: true,
+    vendor: [
+      '~/assets/img/placeholder-2-1.svg',
+      'whatwg-fetch'
+    ]
   },
   plugins: [
-    './plugins/components'
+    './plugins/components',
+    './plugins/clipboard',
+    './plugins/disqus',
+    './plugins/lazyload'
   ],
   head: {
     htmlAttrs: { lang: 'en_US' },
@@ -55,7 +64,18 @@ module.exports = {
   },
   generate: {
     async routes () {
-      return []
+      return [
+        {
+          route: '/blog/',
+          payload: blogPosts
+        },
+        ...blogPosts.map(({ slug }) => {
+          return {
+            route: `/blog/${slug}`,
+            payload: require(`./static/data/${slug}.json`)
+          }
+        })
+      ]
     }
   },
   sitemap: {

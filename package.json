@@ -5,16 +5,16 @@
   "author": "Christer Olsen <colsen1991@gmail.com> (https://www.christerolsen.me)",
   "private": true,
   "scripts": {
-    "_predev": "npm run dato",
+    "predev": "npm run dato",
     "dev": "nuxt",
-    "_prebuild": "npm run dato",
+    "prebuild": "npm run dato",
     "build": "nuxt build",
     "start": "nuxt start",
-    "_pregenerate": "npm run dato",
+    "pregenerate": "npm run dato",
     "generate": "cross-env STATIC=true nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
-    "dato": "dato dump --token=87241c2dd4d705044ef13affb8841f",
+    "dato": "dato dump --token=0d9846b157b3be9bfd39a89e5b07b6",
     "postdato": "rimraf dist && mkdir dist && ncp static/data dist/data"
   },
   "dependencies": {
@@ -22,6 +22,9 @@
     "@nuxtjs/sitemap": "^0.0.3",
     "bulma": "^0.5.2",
     "nuxt": "^1.0.0-rc11",
+    "vue-clipboard2": "^0.0.6",
+    "vue-disqus": "^2.0.3",
+    "vue-lazyload": "^1.1.3",
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {

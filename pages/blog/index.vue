@@ -1,12 +1,14 @@
 <template>
-  <div class="container has-text-centered">
-    <h1 class="title">Coming Sooooon</h1>
-    <p>(Or Soooonish)</p>
+  <div class="container">
+    <blog-post-top v-for="blogPost in res" :blogPost="blogPost" :key="`${blogPost.slug}`" class="section content"/>
   </div>
 </template>
 
 <script>
+  import createGetData from '../../utils/data'
+
   export default {
+    asyncData: createGetData('blog'),
     head: {
       title: 'Blog - Christer Olsen: Web Developer',
       link: [ { rel: 'canonical', href: 'https://www.christerolsen.me/blog' } ],
