@@ -1,9 +1,11 @@
-@import "~bulma/sass/utilities/initial-variables.sass";
+@import "../../node_modules/bulma/sass/utilities/initial-variables.sass";
 
-$turquoise: hsl(171, 100%, 41%);
+$turquoise: #00D1B2;
+$turquoise-darker: #009E86;
 $primary: $turquoise;
+$primary-darker: $turquoise-darker;
 
-$purple: hsl(271, 100%, 71%);
+$purple: #B86BFF;
 $info: $purple;
 
 $gap: 24px;
@@ -24,7 +26,15 @@ $desktop: 960px + (2 * $gap);
 }
 
 .is-flex.direction-column {
-  flex-direction: column;
+  flex-direction: column !important;
+}
+
+a {
+  color: $primary !important;
+}
+
+a:hover, a:focus {
+  color: $primary-darker !important
 }
 
 @media screen and (max-width: 768px) {
@@ -45,9 +55,9 @@ $desktop: 960px + (2 * $gap);
 @media screen and (min-width: 1408px) {
   /* Has/is * fullhd */
   .image.is-max-256x256-fullhd {
-    max-width: 256px;
-    max-height: 256px;
+    max-width: 256px !important;
+    max-height: 256px !important;
   }
 }
 
-@import "~bulma";
+@import "../../node_modules/bulma/bulma.sass";

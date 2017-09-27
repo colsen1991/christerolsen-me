@@ -14,7 +14,7 @@ module.exports = {
     name: 'Christer Olsen: Web Developer',
     short_name: 'CO: Webdev',
     display: 'standalone',
-    description: 'Christer Olsen is a web developer from Norway.',
+    description: 'Homepage and blog of Christer Olsen, a Norwegian web developer',
     orientation: 'any',
     theme_color: '#009f83',
     background_color: '#363636'
@@ -50,23 +50,22 @@ module.exports = {
       { rel: 'me', href: 'https://www.christerolsen.me', type: 'text/html' }
     ],
     meta: [
-      { name: 'title', content: 'Christer Olsen: Web Developer' },
-      { name: 'description', content: 'Christer Olsen is a web developer from Norway.' },
+      { hid: 'description', name: 'description', content: 'Homepage and blog of Christer Olsen, a Norwegian web developer' },
       { name: 'theme-color', content: '#009f83' },
-      { property: 'og:title', content: 'Christer Olsen: Web Developer' },
-      { property: 'og:description', content: 'Christer Olsen is a web developer from Norway.' },
-      { property: 'og:type', content: 'website' },
-      { property: 'og:image', content: 'https://www.christerolsen.me/logo.png' },
+      { hid: 'og:title', property: 'og:title', content: 'Christer Olsen: Web Developer' },
+      { hid: 'og:description', property: 'og:description', content: 'Homepage and blog of Christer Olsen, a Norwegian web developer' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:image', property: 'og:image', content: 'https://www.christerolsen.me/logo-w-background.png' },
       { property: 'og:locale', content: 'en_US' },
       { property: 'og:site_name', content: 'Christer Olsen: Web Developer' },
-      { name: 'robots', content: 'noindex' }
+      { name: 'robots', content: 'index, follow' }
     ]
   },
   generate: {
     async routes () {
       return [
         {
-          route: '/blog/',
+          route: '/blog',
           payload: blogPosts
         },
         ...blogPosts.map(({ slug }) => {
@@ -83,6 +82,8 @@ module.exports = {
     hostname: 'https://www.christerolsen.me',
     cacheTime: 1000 * 60 * 15,
     generate: isStatic,
-    routes: []
+    routes: [
+      ...blogPosts.map(blogPost => `/blog/${blogPost.slug}`)
+    ]
   }
 }

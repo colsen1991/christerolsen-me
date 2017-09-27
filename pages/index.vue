@@ -24,8 +24,8 @@
             w/Express, <span class="has-text-info">webpack</span>, Babel, npm, Java, document and relational <span class="has-text-info">databases</span>. Git, HTML, CSS and vanilla JavaScript goes without saying, but I'll mention it anyway.
           </p>
           <p>
-            Finished personal projects consists of this website<!--, <a class="has-text-primary" href="https://www.christerolsen.no" rel="noopener">my freelance website</a> (in Norwegian)-->,
-            as well as <a class="has-text-primary" href="https://www.beeroclock.site" target="noopener">The Beer O’Clock Clock</a>. But my GitHub profile is home to plenty of half-finished and dead projects.
+            Finished personal projects consists of this website, as well as <a href="https://www.beeroclock.site" target="_blank" rel="noopener nofollow">The Beer O’Clock Clock</a>.
+            But my GitHub profile is home to plenty of half-finished and dead projects.
           </p>
           <p>
             Sounds interesting? Or just feeling lonely? Anyway; let's talk! Contact info in the footer!
@@ -38,3 +38,11 @@
     </div>
   </div>
 </template>
+
+<script>
+  export default {
+    head: {
+      link: [ { rel: 'canonical', href: 'https://www.christerolsen.me' } ]
+    }
+  }
+</script>

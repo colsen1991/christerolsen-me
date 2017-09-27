@@ -28,10 +28,10 @@
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
-    "babel-eslint": "^8.0.0",
+    "babel-eslint": "^8.0.1",
     "cross-env": "^5.0.5",
-    "datocms-client": "^0.3.27",
-    "eslint": "^4.6.1",
+    "datocms-client": "^0.3.28",
+    "eslint": "^4.7.2",
     "eslint-config-standard": "^10.2.1",
     "eslint-loader": "^1.9.0",
     "eslint-plugin-html": "^3.2.1",

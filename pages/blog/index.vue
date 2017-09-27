@@ -13,8 +13,8 @@
       title: 'Blog - Christer Olsen: Web Developer',
       link: [ { rel: 'canonical', href: 'https://www.christerolsen.me/blog' } ],
       meta: [
-        { name: 'title', content: 'Blog - Christer Olsen: Web Developer' },
-        { property: 'og:title', content: 'Blog - Christer Olsen: Web Developer' }
+        { hid: 'title', name: 'title', content: 'Blog - Christer Olsen: Web Developer' },
+        { hid: 'og:title', property: 'og:title', content: 'Blog - Christer Olsen: Web Developer' }
       ]
     }
   }

@@ -10,27 +10,27 @@
       <span>Feel like sharing?</span>
       <br>
       <br>
-      <div class="level is-mobile has-text-primary">
+      <div class="level is-mobile">
         <span class="level-item">
-          <a v-clipboard:copy="url">
+          <a v-clipboard:copy="url" href="#">
             Copy URL
           </a>
         </span>
 
         <span class="level-item">
-          <a :href="`https://twitter.com/home?status=${urlEncoded}`" target="noopener" rel="nofollow">
+          <a :href="`https://twitter.com/home?status=${urlEncoded}`" target="_blank" rel="nofollow noopener">
             Twitter
           </a>
         </span>
 
         <span class="level-item">
-          <a :href="`https://www.facebook.com/sharer/sharer.php?u=${urlEncoded}`" target="noopener" rel="nofollow">
+          <a :href="`https://www.facebook.com/sharer/sharer.php?u=${urlEncoded}`" target="_blank" rel="nofollow noopener">
             Facebook
           </a>
         </span>
 
         <span class="level-item">
-          <a :href="`https://www.linkedin.com/shareArticle?mini=true&url=${urlEncoded}&title=${titleEncoded}`" target="noopener" rel="nofollow">
+          <a :href="`https://www.linkedin.com/shareArticle?mini=true&url=${urlEncoded}&title=${titleEncoded}`" target="_blank" rel="nofollow noopener">
             LinkedIn
           </a>
         </span>
@@ -71,11 +71,12 @@
         title: `${this.res.title} - Blog - Christer Olsen: Web Developer`,
         link: [ { rel: 'canonical', href: `https://www.christerolsen.me/blog/${this.res.slug}` } ],
         meta: [
-          { name: 'title', content: `${this.res.title} - Blog - Christer Olsen: Web Developer` },
-          { property: 'og:title', content: `${this.res.title} - Blog - Christer Olsen: Web Developer` },
-          { property: 'og:description', content: this.res.excerpt },
-          { property: 'og:image', content: this.res.image.url },
-          { property: 'og:type', content: 'article' }
+          { hid: 'title', name: 'title', content: this.res.title },
+          { hid: 'description', name: 'description', content: this.res.excerpt },
+          { hid: 'og:title', property: 'og:title', content: this.res.title },
+          { hid: 'og:description', property: 'og:description', content: this.res.excerpt },
+          { hid: 'og:image', property: 'og:image', content: this.res.image.url },
+          { hid: 'og:type', property: 'og:type', content: 'article' }
         ]
       }
     },
