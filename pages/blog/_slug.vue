@@ -12,8 +12,8 @@
       <br>
       <div class="level is-mobile">
         <span class="level-item">
-          <a v-clipboard:copy="url" href="#">
-            Copy URL
+          <a v-clipboard:copy="url" v-clipboard:success="onCopy" >
+            Copy URL <span class="has-text-success" :class="{ 'is-not-visible': !showCopySuccess}">&check;</span>
           </a>
         </span>
 
@@ -61,10 +61,20 @@
     methods: {
       toggleComments () {
         this.showComments = true
+      },
+      onCopy () {
+        this.showCopySuccess = true
+
+        setTimeout(() => {
+          this.showCopySuccess = false
+        }, 5000)
       }
     },
     data () {
-      return { showComments: false }
+      return {
+        showComments: false,
+        showCopySuccess: false
+      }
     },
     head () {
       return {

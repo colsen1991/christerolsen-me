@@ -37,6 +37,10 @@ a:hover, a:focus {
   color: $primary-darker !important
 }
 
+.is-not-visible {
+  visibility: hidden !important;
+}
+
 @media screen and (max-width: 768px) {
   /* Has/is * mobile */
 }
