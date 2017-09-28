@@ -21,7 +21,8 @@ module.exports = {
   },
   modules: [
     '@nuxtjs/pwa',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    [ '@nuxtjs/google-analytics', { ua: 'UA-107229265-2' } ]
   ],
   build: {
     postcss: {

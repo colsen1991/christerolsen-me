@@ -8,6 +8,10 @@
   dependencies:
     cssnano "^3.10.0"
 
+"@nuxtjs/google-analytics@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/google-analytics/-/google-analytics-1.0.0.tgz#aa48d47237fa46d1decc5a47ec1bf6a67049640f"
+
 "@nuxtjs/icon@latest":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@nuxtjs/icon/-/icon-1.0.1.tgz#650472d958243e72a2664a77345373f20c44dd39"

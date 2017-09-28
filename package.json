@@ -18,6 +18,7 @@
     "postdato": "rimraf dist && mkdir dist && ncp static/data dist/data"
   },
   "dependencies": {
+    "@nuxtjs/google-analytics": "^1.0.0",
     "@nuxtjs/pwa": "^0.2.1",
     "@nuxtjs/sitemap": "^0.0.3",
     "bulma": "^0.5.2",
