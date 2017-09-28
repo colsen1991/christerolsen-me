@@ -41,6 +41,18 @@ a:hover, a:focus {
   visibility: hidden !important;
 }
 
+.small-vertical-section {
+  padding: 1.5rem 0;
+}
+
+.small-vertical-section:first-child {
+  padding-top: 0 !important;
+}
+
+.small-vertical-section:last-child {
+  padding-bottom: 0 !important;
+}
+
 @media screen and (max-width: 768px) {
   /* Has/is * mobile */
 }

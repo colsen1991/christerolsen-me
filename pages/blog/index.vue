@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <blog-post-top v-for="blogPost in res" :blogPost="blogPost" :key="`${blogPost.slug}`" class="section content"/>
+    <blog-post-top v-for="blogPost in res" :blogPost="blogPost" :key="`${blogPost.slug}`" class="small-vertical-section content"/>
   </div>
 </template>
 

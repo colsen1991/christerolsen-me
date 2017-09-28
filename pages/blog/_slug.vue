@@ -1,16 +1,14 @@
 <template>
   <article class="container content">
-    <header class="section">
+    <header class="small-vertical-section">
       <blog-post-top :blogPost="res" :link="false"/>
     </header>
 
-    <section class="section" v-html="res.content"/>
+    <section class="small-vertical-section" v-html="res.content"/>
 
-    <footer class="section has-text-centered">
+    <footer class="small-vertical-section has-text-centered">
       <span>Feel like sharing?</span>
-      <br>
-      <br>
-      <div class="level">
+      <div class="level small-vertical-section">
         <span class="level-item">
           <a v-clipboard:copy="url" v-clipboard:success="onCopy" >
             <span :class="{ 'has-text-success': showCopySuccess}">Copy URL</span>
@@ -35,7 +33,7 @@
           </a>
         </span>
       </div>
-      <div class="section has-text-centered">
+      <div class="small-vertical-section has-text-centered">
         <button v-if="!showComments" class="button is-primary is-large" @click="toggleComments">Show Comments</button>
         <vue-disqus v-if="showComments" shortname="christerolsen-me" :identifier="res.slug" :url="`https://www.christerolsen.me/blog/${this.res.slug}`"/>
       </div>
