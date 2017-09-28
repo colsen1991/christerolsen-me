@@ -42,7 +42,7 @@
 <script>
   export default {
     head: {
-      link: [ { rel: 'canonical', href: 'https://www.christerolsen.me' } ]
+      link: [ { hid: 'canonical', rel: 'canonical', href: 'https://www.christerolsen.me' } ]
     }
   }
 </script>
