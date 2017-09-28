@@ -10,10 +10,10 @@
       <span>Feel like sharing?</span>
       <br>
       <br>
-      <div class="level is-mobile">
+      <div class="level">
         <span class="level-item">
           <a v-clipboard:copy="url" v-clipboard:success="onCopy" >
-            Copy URL <span class="has-text-success" :class="{ 'is-not-visible': !showCopySuccess}">&check;</span>
+            <span :class="{ 'has-text-success': showCopySuccess}">Copy URL</span>
           </a>
         </span>
 
