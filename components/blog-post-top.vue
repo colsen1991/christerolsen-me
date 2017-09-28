@@ -20,7 +20,7 @@
       </time>
     </div>
 
-    <div v-html="blogPost.excerpt"></div>
+    <p>{{blogPost.excerpt}}</p>
   </div>
 </template>
 
