@@ -1,8 +1,9 @@
 <template>
   <div>
-    <nuxt-link :to="`/blog/${blogPost.slug}`">
+    <nuxt-link v-if="link" :to="`/blog/${blogPost.slug}`">
       <h1 class="title">{{blogPost.title}}</h1>
     </nuxt-link>
+    <h1 v-if="!link" class="title">{{blogPost.title}}</h1>
 
     <nuxt-link v-if="link" :to="`/blog/${blogPost.slug}`">
       <img width="100%" :title="blogPost.image.title" :alt="blogPost.image.alt" v-lazy="blogPost.image.url"/>
