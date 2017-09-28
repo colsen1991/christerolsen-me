@@ -58,7 +58,7 @@ module.exports = {
       { hid: 'og:image', property: 'og:image', content: 'https://www.christerolsen.me/logo-w-background.png' },
       { property: 'og:locale', content: 'en_US' },
       { property: 'og:site_name', content: 'Christer Olsen: Web Developer' },
-      { name: 'robots', content: 'noindex, nofollow' }
+      { name: 'robots', content: 'index, follow' }
     ]
   },
   generate: {
