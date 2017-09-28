@@ -43,7 +43,7 @@ module.exports = {
     './plugins/lazyload'
   ],
   head: {
-    htmlAttrs: { lang: 'en_US' },
+    htmlAttrs: { lang: 'en' },
     title: 'Christer Olsen: Web Developer',
     link: [
       { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -57,7 +57,7 @@ module.exports = {
       { hid: 'og:description', property: 'og:description', content: 'Homepage and blog of Christer Olsen, a Norwegian web developer' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:image', property: 'og:image', content: 'https://www.christerolsen.me/logo-w-background.png' },
-      { property: 'og:locale', content: 'en_US' },
+      { property: 'og:locale', content: 'en' },
       { property: 'og:site_name', content: 'Christer Olsen: Web Developer' },
       { name: 'robots', content: 'index, follow' }
     ]
