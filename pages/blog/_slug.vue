@@ -1,36 +1,37 @@
 <template>
   <article class="container content">
     <header class="small-vertical-section">
-      <blog-post-top :blogPost="res" :link="false"/>
+      <img width="100%" :title="res.image.title" :alt="res.image.alt" v-lazy="res.image.url"/>
+      <h1 class="title">{{res.title}}</h1>
     </header>
 
-    <section class="small-vertical-section" v-html="res.content"/>
+    <section class="small-vertical-section" v-html="res.content">
+      <p>{{res.excerpt}}</p>
+    </section>
 
     <footer class="small-vertical-section has-text-centered">
+      <div class="small-vertical-section level is-mobile">
+        <div class="tags level-left is-marginless">
+        <span v-for="tag in res.tags.split(',')" :key="`${res.slug}-${tag}`" class="tag is-info">
+          {{tag}}
+        </span>
+        </div>
+        <time class="level-right" :datetime="res.updatedAt">
+          {{new Date(res.updatedAt).toLocaleDateString()}}
+        </time>
+      </div>
       <span>Feel like sharing?</span>
       <div class="level small-vertical-section">
         <span class="level-item">
-          <a v-clipboard:copy="url" v-clipboard:success="onCopy" >
-            <span :class="{ 'has-text-success': showCopySuccess}">Copy URL</span>
-          </a>
+          <a :href="`https://twitter.com/home?status=${urlEncoded}`" target="_blank" rel="nofollow noopener">Twitter</a>
         </span>
 
         <span class="level-item">
-          <a :href="`https://twitter.com/home?status=${urlEncoded}`" target="_blank" rel="nofollow noopener">
-            Twitter
-          </a>
+          <a :href="`https://www.facebook.com/sharer/sharer.php?u=${urlEncoded}`" target="_blank" rel="nofollow noopener">Facebook</a>
         </span>
 
         <span class="level-item">
-          <a :href="`https://www.facebook.com/sharer/sharer.php?u=${urlEncoded}`" target="_blank" rel="nofollow noopener">
-            Facebook
-          </a>
-        </span>
-
-        <span class="level-item">
-          <a :href="`https://www.linkedin.com/shareArticle?mini=true&url=${urlEncoded}&title=${titleEncoded}`" target="_blank" rel="nofollow noopener">
-            LinkedIn
-          </a>
+          <a :href="`https://www.linkedin.com/shareArticle?mini=true&url=${urlEncoded}&title=${titleEncoded}`" target="_blank" rel="nofollow noopener">LinkedIn</a>
         </span>
       </div>
       <div class="small-vertical-section has-text-centered">
@@ -59,20 +60,10 @@
     methods: {
       toggleComments () {
         this.showComments = true
-      },
-      onCopy () {
-        this.showCopySuccess = true
-
-        setTimeout(() => {
-          this.showCopySuccess = false
-        }, 5000)
       }
     },
     data () {
-      return {
-        showComments: false,
-        showCopySuccess: false
-      }
+      return { showComments: false }
     },
     head () {
       return {

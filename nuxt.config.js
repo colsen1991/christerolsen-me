@@ -4,11 +4,10 @@ const blogPosts = require('./static/data/blog.json')
 
 module.exports = {
   css: [
-    { src: './assets/style/bulma-alterations.scss', lang: 'sass' },
-    { src: './assets/style/global.scss', lang: 'sass' }
+    { src: './assets/style/index.scss', lang: 'sass' }
   ],
   loading: {
-    color: '#23d160'
+    color: '#48E826'
   },
   manifest: {
     name: 'Christer Olsen: Web Developer',
@@ -16,7 +15,7 @@ module.exports = {
     display: 'standalone',
     description: 'Homepage and blog of Christer Olsen, a Norwegian web developer',
     orientation: 'any',
-    theme_color: '#009f83',
+    theme_color: '#FB5607',
     background_color: '#363636'
   },
   modules: [
@@ -38,7 +37,6 @@ module.exports = {
   },
   plugins: [
     './plugins/components',
-    './plugins/clipboard',
     './plugins/disqus',
     './plugins/lazyload'
   ],
@@ -52,11 +50,11 @@ module.exports = {
     ],
     meta: [
       { hid: 'description', name: 'description', content: 'Homepage and blog of Christer Olsen, a Norwegian web developer' },
-      { name: 'theme-color', content: '#009f83' },
+      { name: 'theme-color', content: '#FB5607' },
       { hid: 'og:title', property: 'og:title', content: 'Christer Olsen: Web Developer' },
       { hid: 'og:description', property: 'og:description', content: 'Homepage and blog of Christer Olsen, a Norwegian web developer' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
-      { hid: 'og:image', property: 'og:image', content: 'https://www.christerolsen.me/logo-w-background.png' },
+      { hid: 'og:image', property: 'og:image', content: 'https://www.christerolsen.me/icon.png' },
       { property: 'og:locale', content: 'en' },
       { property: 'og:site_name', content: 'Christer Olsen: Web Developer' },
       { name: 'robots', content: 'index, follow' }

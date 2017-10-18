@@ -3,7 +3,7 @@
     <div class="columns">
       <div class="column is-half is-one-third-fullhd is-flex has-centered direction-column">
         <figure class="image is-max-256x256-fullhd is-max-384x384">
-          <img src="~/assets/img/me.png" alt="Christer Olsen" title="Me">
+          <img src="~/assets/img/me.png" alt="Portrait of me" title="Me">
         </figure>
         <h1 class="title is-marginless">Chris Olsen</h1>
         <h2 class="title is-marginless">Web Developer</h2>
@@ -11,10 +11,10 @@
       <div class="column is-flex has-centered direction-column">
         <div>
           <p>
-            The name's Chris!
+            As mentioned; the name's Chris!
           </p>
           <p>
-            I’m a self-employed web developer, beer enthusiast, and traveller. Oh, and I'm Norwegian!
+            I’m a Norwegian self-employed web developer, beer enthusiast, and traveller.
           </p>
           <p>
             I have a <span class="has-text-info">bachelor’s degree</span> in software engineering, as well as 2 years of experience in the field.
@@ -29,9 +29,6 @@
           </p>
           <p>
             Sounds interesting? Or just feeling lonely? Anyway; let's talk! Contact info in the footer!
-          </p>
-          <p>
-            Oh, and if you've got nothing better to do; check out my gibberish, a.k.a. blog!
           </p>
         </div>
       </div>

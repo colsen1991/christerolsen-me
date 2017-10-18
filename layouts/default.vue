@@ -1,12 +1,12 @@
 <template>
-  <div class="hero is-dark is-fullheight">
-    <header class="hero-head">
+  <div>
+    <header class="navbar is-black">
       <site-header/>
     </header>
-    <main class="hero-body">
+    <main class="section is-medium">
       <nuxt/>
     </main>
-    <footer class="hero-foot">
+    <footer class="footer">
       <site-footer/>
     </footer>
   </div>

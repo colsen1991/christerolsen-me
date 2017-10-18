@@ -1,14 +1,30 @@
 <template>
-  <div class="nav">
-    <div class="container">
-      <div class="nav-left">
-        <nuxt-link to="/" class="nav-item">
-          <img src="~/assets/img/logo-full.png" alt="Christer Olsen" title="Logo - Christer Olsen">
-        </nuxt-link>
-      </div>
+  <div class="container">
+    <div class="navbar-brand">
+      <nuxt-link to="/" class="navbar-item">
+        <img src="~/assets/img/logo.png" alt="Christer Olsen">
+      </nuxt-link>
 
-      <nav class="nav-right">
-        <nuxt-link to="/blog" class="nav-item">Blog</nuxt-link>
+      <span class="navbar-burger"
+            :class="{'is-active': showNavbarMenu}"
+            :title="`${showNavbarMenu ? 'Skjul' : 'Vis'} navigasjonsmeny`"
+            role="button"
+            tabindex="0"
+            @click="toggleNavbarMenu"
+            @keydown.enter="toggleNavbarMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </div>
+
+    <div class="navbar-menu"
+         :class="{'is-active': showNavbarMenu}"
+         @click="hideNavbarMenu"
+         @keypress.enter="hideNavbarMenu">
+      <nav class="navbar-end">
+        <nuxt-link to="/" class="navbar-item">home</nuxt-link>
+        <nuxt-link to="/blog" class="navbar-item">blog</nuxt-link>
       </nav>
     </div>
   </div>
@@ -16,6 +32,20 @@
 
 <script>
   export default {
-    name: 'site-header'
+    name: 'site-header',
+    data () {
+      return {
+        showNavbarMenu: false
+      }
+    },
+    methods: {
+      toggleNavbarMenu () {
+        this.showNavbarMenu = !this.showNavbarMenu
+      },
+      hideNavbarMenu () {
+        this.showNavbarMenu = false
+        document.querySelector('.navbar-burger').focus()
+      }
+    }
   }
 </script>
