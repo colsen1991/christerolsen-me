@@ -17,7 +17,7 @@
             I’m a Norwegian self-employed web developer, beer enthusiast, and traveller.
           </p>
           <p>
-            I have a <span class="has-text-info">bachelor’s degree</span> in software engineering, as well as 2 years of experience in the field.
+            I have a <span class="has-text-info">bachelor’s degree</span> in software engineering, as well as 2 years of experience in the field. VINDIR is the name of my company, and the website can be found <a href="https://www.beeroclock.site" target="_blank" rel="noopener nofollow">here</a> (in Norwegian).
           </p>
           <p>
             Technologies I've worked with includes <span class="has-text-info">React</span>, Backbone.js, <span class="has-text-info">Vue.js</span> w/Nuxt.js, jQuery, <span class="has-text-info">Node.js</span>
@@ -39,6 +39,7 @@
 <script>
   export default {
     head: {
+      title: 'Frontpage',
       link: [ { hid: 'canonical', rel: 'canonical', href: 'https://www.christerolsen.me' } ]
     }
   }

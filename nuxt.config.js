@@ -42,7 +42,7 @@ module.exports = {
   ],
   head: {
     htmlAttrs: { lang: 'en' },
-    title: 'Christer Olsen: Web Developer',
+    titleTemplate: '%s - Chrsiter Olsen: Web Developer',
     link: [
       { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'author', href: '/humans.txt' },
@@ -84,5 +84,9 @@ module.exports = {
     routes: [
       ...blogPosts.map(blogPost => `/blog/${blogPost.slug}`)
     ]
+  },
+  workbox: {
+    globPatterns: ['**/*.{js,css,json,html,png,jpeg}'],
+    handleFetch: true
   }
 }

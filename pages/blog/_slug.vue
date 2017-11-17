@@ -67,7 +67,7 @@
     },
     head () {
       return {
-        title: `${this.res.title} - Blog - Christer Olsen: Web Developer`,
+        title: `${this.res.title} - Blog`,
         link: [ { hid: 'canonical', rel: 'canonical', href: `https://www.christerolsen.me/blog/${this.res.slug}` } ],
         meta: [
           { hid: 'description', name: 'description', content: this.res.excerpt },

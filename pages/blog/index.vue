@@ -33,7 +33,7 @@
   export default {
     asyncData: createGetData('blog'),
     head: {
-      title: 'Blog - Christer Olsen: Web Developer',
+      title: 'Blog',
       link: [ { hid: 'canonical', rel: 'canonical', href: 'https://www.christerolsen.me/blog' } ],
       meta: [
         { hid: 'og:title', property: 'og:title', content: 'Blog - Christer Olsen: Web Developer' }

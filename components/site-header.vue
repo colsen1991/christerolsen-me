@@ -7,7 +7,7 @@
 
       <span class="navbar-burger"
             :class="{'is-active': showNavbarMenu}"
-            :title="`${showNavbarMenu ? 'Skjul' : 'Vis'} navigasjonsmeny`"
+            :title="`${showNavbarMenu ? 'Hide' : 'Show'} navigation`"
             role="button"
             tabindex="0"
             @click="toggleNavbarMenu"
