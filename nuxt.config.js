@@ -86,7 +86,6 @@ module.exports = {
     ]
   },
   workbox: {
-    globPatterns: ['**/*.{js,css,json,html,png,jpeg}'],
     handleFetch: true
   }
 }
