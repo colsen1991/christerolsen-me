@@ -86,6 +86,6 @@ module.exports = {
     ]
   },
   workbox: {
-    handleFetch: true
+    handleFetch: isStatic
   }
 }
