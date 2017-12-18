@@ -82,10 +82,6 @@ module.exports = {
     hostname: 'https://www.christerolsen.me',
     cacheTime: 1000 * 60 * 15,
     generate: isStatic,
-    exclude: [
-      '/404',
-      '/5xx'
-    ],
     routes: [
       ...blogPosts.map(blogPost => `/blog/${blogPost.slug}`)
     ]

@@ -9,8 +9,7 @@ export default function createGetData (path) {
         const response = await fetch(`/data/${path || `blog/${slug}`}.json`)
         res = await response.json()
       } catch (e) {
-        console.log('derp')
-        redirect('error')
+        console.error(e)
       }
     } else if (isServer) {
       res = require(`~/dist/data/${path || `blog/${slug}`}.json`)
