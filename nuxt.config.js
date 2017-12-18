@@ -32,6 +32,7 @@ module.exports = {
     extractCSS: true,
     vendor: [
       '~/assets/img/placeholder-2-1.svg',
+      '~/utils/data.js',
       'whatwg-fetch'
     ]
   },
@@ -70,7 +71,7 @@ module.exports = {
         ...blogPosts.map(({ slug }) => {
           return {
             route: `/blog/${slug}`,
-            payload: require(`./static/data/${slug}.json`)
+            payload: require(`./static/data/blog/${slug}.json`)
           }
         })
       ]
@@ -81,6 +82,10 @@ module.exports = {
     hostname: 'https://www.christerolsen.me',
     cacheTime: 1000 * 60 * 15,
     generate: isStatic,
+    exclude: [
+      '/404',
+      '/5xx'
+    ],
     routes: [
       ...blogPosts.map(blogPost => `/blog/${blogPost.slug}`)
     ]
