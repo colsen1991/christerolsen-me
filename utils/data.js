@@ -10,6 +10,7 @@ export default function createGetData (path) {
         res = await response.json()
       } catch (e) {
         console.error(e)
+        redirect('/error')
       }
     } else if (isServer) {
       res = require(`~/dist/data/${path || `blog/${slug}`}.json`)
