@@ -13,7 +13,7 @@
           <a href="https://www.facebook.com/colsen1991" target="_blank" rel="noopener nofollow">facebook</a>&nbsp;
           <a href="https://www.linkedin.com/in/colsen1991" target="_blank" rel="noopener nofollow">linkedin</a><br>
           <a href="https://github.com/colsen1991" target="_blank" rel="noopener nofollow">github</a>&nbsp;
-          <a href="mailto:colsen1991@gmail.com" target="_blank" rel="noopener nofollow">email</a>
+          <a href="mailto:colsen1991@gmail.com">email</a>
         </div>
 
         <hr class="is-hidden-tablet">
