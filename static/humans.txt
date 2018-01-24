@@ -8,6 +8,6 @@ GitHub: cosen1991
 LinkedIn: christer-olsen-15845b53
 
 /* SITE */
-Last update: 2017/09/18
+Last update: 2018/1/24
 Standards: HTML5, CSS3, JavaScript.
 Software: WebStorm, git, node, npm.

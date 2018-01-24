@@ -3,7 +3,7 @@
     <div class="columns">
       <div class="column is-half is-one-third-fullhd is-flex has-centered direction-column">
         <figure class="image is-max-256x256-fullhd is-max-384x384">
-          <img src="~/assets/img/me.png" alt="Portrait of me" title="Me">
+          <img v-lazy="'/img/me.png'" alt="Portrait of me - Christer Olsen" title="The developer himself">
         </figure>
         <h1 class="title is-marginless">Chris Olsen</h1>
         <h2 class="title is-marginless">Web Developer</h2>
