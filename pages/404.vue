@@ -10,8 +10,8 @@
 <script>
   export default {
     head: {
-      title: 'Frontpage',
-      link: [ { hid: 'canonical', rel: 'canonical', href: 'https://www.christerolsen.me' } ]
+      title: '404',
+      link: [ { hid: 'canonical', rel: 'canonical', href: 'https://www.christerolsen.me/404' } ]
     }
   }
 </script>
