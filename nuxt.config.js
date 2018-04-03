@@ -35,21 +35,19 @@ module.exports = {
   ],
   head: {
     htmlAttrs: { lang: 'en' },
-    titleTemplate: '%s - Chrsiter Olsen: Web Developer',
+    titleTemplate: '%s - Christer Olsen: Web Developer',
     link: [
       { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'author', href: '/humans.txt' },
-      { rel: 'me', href: 'https://www.christerolsen.me', type: 'text/html' }
+      { rel: 'author', href: '/humans.txt' }
     ],
     meta: [
       { hid: 'description', name: 'description', content: 'Homepage of Christer Olsen, a Norwegian web developer' },
       { name: 'theme-color', content: '#FB5607' },
       { hid: 'og:title', property: 'og:title', content: 'Christer Olsen: Web Developer' },
       { hid: 'og:description', property: 'og:description', content: 'Homepage of Christer Olsen, a Norwegian web developer' },
-      { hid: 'og:type', property: 'og:type', content: 'website' },
-      { hid: 'og:image', property: 'og:image', content: 'https://www.christerolsen.me/icon.png' },
-      { property: 'og:locale', content: 'en' },
-      { property: 'og:site_name', content: 'Christer Olsen: Web Developer' },
+      { hid: 'og:image', property: 'og:image', content: 'https://www.christerolsen.me/img/me-lg.png' },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'Christer Olsen: Web Developer' },
+      { hid: 'twitter:image', property: 'twitter:image', content: 'https://www.christerolsen.me/img/me-lg.png' },
       { name: 'robots', content: 'index, follow' }
     ]
   },

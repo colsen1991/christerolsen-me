@@ -21,7 +21,7 @@
           </p>
           <p>
             Technologies I've worked with includes <span class="has-text-info">React</span>, Backbone.js, <span class="has-text-info">Vue.js</span> w/Nuxt.js, jQuery, <span class="has-text-info">Node.js</span>
-            w/Express, <span class="has-text-info">webpack</span>, Babel, npm, Java, document and relational <span class="has-text-info">databases</span>. Git, HTML, CSS and vanilla JavaScript goes without saying, but I'll mention it anyway.
+            w/Express, <span class="has-text-info">webpack</span>, Babel, npm, Java, document and relational <span class="has-text-info">databases</span>. Git, HTML, CSS, and vanilla JavaScript goes without saying, but I'll mention it anyway.
           </p>
           <p>
             Finished personal projects consists of this website, as well as <a href="https://www.beeroclock.site" target="_blank" rel="noopener nofollow">The Beer O’Clock Clock</a>.

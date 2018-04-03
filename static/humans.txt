@@ -5,9 +5,9 @@ Site: https://christerolsen.me
 Facebook: colsen1991
 Twitter: colsen1991
 GitHub: cosen1991
-LinkedIn: christer-olsen-15845b53
+LinkedIn: christer1991
 
 /* SITE */
-Last update: 2018/1/24
+Last update: 2018/4/3
 Standards: HTML5, CSS3, JavaScript.
 Software: WebStorm, git, node, npm.
