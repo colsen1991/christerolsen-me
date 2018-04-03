@@ -35,7 +35,7 @@ module.exports = {
   ],
   head: {
     htmlAttrs: { lang: 'en' },
-    titleTemplate: '%s - Christer Olsen: Web Developer',
+    title: 'Christer Olsen: Web Developer',
     link: [
       { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'author', href: '/humans.txt' }

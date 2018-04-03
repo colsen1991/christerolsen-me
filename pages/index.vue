@@ -44,7 +44,6 @@
 <script>
   export default {
     head: {
-      title: 'Frontpage',
       link: [{hid: 'canonical', rel: 'canonical', href: 'https://www.christerolsen.me'}]
     }
   }
