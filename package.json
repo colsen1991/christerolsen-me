@@ -8,8 +8,11 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "cross-env STATIC=true nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+    "prestaging": "ncp ./static/robots/robots-staging.txt ./static/robots.txt",
+    "staging": "cross-env STAGING=true npm run generate",
+    "preproduction": "ncp ./static/robots/robots-prod.txt ./static/robots.txt",
+    "production": "cross-env STAGING=false npm run generate",
+    "generate": "cross-env STATIC=true nuxt generate"
   },
   "dependencies": {
     "@nuxtjs/google-analytics": "^2.0.2",
@@ -32,6 +35,7 @@
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.0.1",
+    "ncp": "^2.0.0",
     "node-sass": "^4.8.3",
     "sass-loader": "^7.0.1"
   }

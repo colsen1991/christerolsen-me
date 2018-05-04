@@ -1,8 +1,9 @@
-const isStatic = !!process.env.STATIC
+const isStatic = process.env.STATIC === 'true'
+const isStaging = process.env.STAGING === 'true'
 
 module.exports = {
   css: [
-    { src: './assets/style/index.scss', lang: 'sass' }
+    {src: './assets/style/index.scss', lang: 'sass'}
   ],
   loading: {
     color: '#48E826'
@@ -19,7 +20,7 @@ module.exports = {
   modules: [
     '@nuxtjs/pwa',
     '@nuxtjs/sitemap',
-    [ '@nuxtjs/google-analytics', { ua: 'UA-107229265-2' } ]
+    ['@nuxtjs/google-analytics', {ua: isStaging ? '' : 'UA-107229265-2'}]
   ],
   build: {
     postcss: {
@@ -34,21 +35,25 @@ module.exports = {
     './plugins/lazyload'
   ],
   head: {
-    htmlAttrs: { lang: 'en' },
+    htmlAttrs: {lang: 'en'},
     title: 'Christer Olsen: Web Developer',
     link: [
-      { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'author', href: '/humans.txt' }
+      {rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico'},
+      {rel: 'author', href: '/humans.txt'}
     ],
     meta: [
-      { hid: 'description', name: 'description', content: 'Homepage of Christer Olsen, a Norwegian web developer' },
-      { name: 'theme-color', content: '#FB5607' },
-      { hid: 'og:title', property: 'og:title', content: 'Christer Olsen: Web Developer' },
-      { hid: 'og:description', property: 'og:description', content: 'Homepage of Christer Olsen, a Norwegian web developer' },
-      { hid: 'og:image', property: 'og:image', content: 'https://www.christerolsen.me/img/me-lg.png' },
-      { hid: 'og:site_name', property: 'og:site_name', content: 'Christer Olsen: Web Developer' },
-      { hid: 'twitter:image', property: 'twitter:image', content: 'https://www.christerolsen.me/img/me-lg.png' },
-      { name: 'robots', content: 'index, follow' }
+      {hid: 'description', name: 'description', content: 'Homepage of Christer Olsen, a Norwegian web developer'},
+      {name: 'theme-color', content: '#FB5607'},
+      {hid: 'og:title', property: 'og:title', content: 'Christer Olsen: Web Developer'},
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: 'Homepage of Christer Olsen, a Norwegian web developer'
+      },
+      {hid: 'og:image', property: 'og:image', content: 'https://www.christerolsen.me/img/me-lg.png'},
+      {hid: 'og:site_name', property: 'og:site_name', content: 'Christer Olsen: Web Developer'},
+      {hid: 'twitter:image', property: 'twitter:image', content: 'https://www.christerolsen.me/img/me-lg.png'},
+      {name: 'robots', content: isStaging ? 'noindex, nofollow' : 'index, follow'}
     ]
   },
   sitemap: {

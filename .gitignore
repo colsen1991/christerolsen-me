@@ -23,6 +23,7 @@ static/sw.js
 static/workbox-sw*.js
 static/data
 static/sitemap.xml
+static/robots.txt
 
 # Generated .map files
 *.map
