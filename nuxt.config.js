@@ -17,7 +17,13 @@ module.exports = {
     theme_color: '#FB5607',
     background_color: '#363636'
   },
-  modules: [
+  modules: isStaging ? [
+    '@nuxtjs/pwa',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/axios',
+    '@nuxtjs/auth',
+    ['@nuxtjs/google-analytics', {ua: isStaging ? 'STAGING' : 'UA-107229265-2'}]
+  ] : [
     '@nuxtjs/pwa',
     '@nuxtjs/sitemap',
     ['@nuxtjs/google-analytics', {ua: isStaging ? 'STAGING' : 'UA-107229265-2'}]
@@ -60,9 +66,25 @@ module.exports = {
     path: '/sitemap.xml',
     hostname: 'https://www.christerolsen.me',
     cacheTime: 1000 * 60 * 15,
+    exclude: [
+      '404',
+      'login',
+      'logout'
+    ],
     generate: isStatic
   },
   workbox: {
     handleFetch: isStatic
-  }
+  },
+  router: isStaging ? {
+    middleware: ['auth']
+  } : undefined,
+  auth: isStaging ? {
+    strategies: {
+      auth0: {
+        domain: 'vindir.eu.auth0.com',
+        client_id: 'NScWDGH2tk9tP7sPZIYtHiD2KhwA1USH'
+      }
+    }
+  } : undefined
 }

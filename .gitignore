@@ -25,5 +25,7 @@ static/data
 static/sitemap.xml
 static/robots.txt
 
+store
+
 # Generated .map files
 *.map

@@ -8,20 +8,21 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "prestaging": "ncp ./static/robots/robots-staging.txt ./static/robots.txt",
+    "prestaging": "ncp .robots/robots-staging.txt static/robots.txt && ncp .store store",
     "staging": "cross-env STAGING=true npm run generate",
-    "preproduction": "ncp ./static/robots/robots-prod.txt ./static/robots.txt",
+    "preproduction": "ncp .robots/robots-prod.txt static/robots.txt && rimraf store",
     "production": "cross-env STAGING=false npm run generate",
     "generate": "cross-env STATIC=true nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/auth": "^4.3.0",
+    "@nuxtjs/axios": "^5.3.1",
     "@nuxtjs/google-analytics": "^2.0.2",
     "@nuxtjs/pwa": "^2.0.8",
     "@nuxtjs/sitemap": "^0.1.1",
     "bulma": "^0.7.1",
     "nuxt": "^1.4.0",
-    "vue-lazyload": "^1.2.2",
-    "whatwg-fetch": "^2.0.4"
+    "vue-lazyload": "^1.2.2"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
@@ -37,6 +38,7 @@
     "eslint-plugin-standard": "^3.0.1",
     "ncp": "^2.0.0",
     "node-sass": "^4.8.3",
+    "rimraf": "^2.6.2",
     "sass-loader": "^7.0.1"
   }
 }
