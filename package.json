@@ -15,30 +15,30 @@
     "generate": "cross-env STATIC=true nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/auth": "^4.3.0",
-    "@nuxtjs/axios": "^5.3.1",
-    "@nuxtjs/google-analytics": "^2.0.2",
-    "@nuxtjs/pwa": "^2.0.8",
-    "@nuxtjs/sitemap": "^0.1.1",
-    "bulma": "^0.7.1",
-    "nuxt": "^1.4.0",
-    "vue-lazyload": "^1.2.2"
+    "@nuxtjs/auth": "4.5.3",
+    "@nuxtjs/axios": "5.3.6",
+    "@nuxtjs/google-analytics": "2.0.2",
+    "@nuxtjs/pwa": "2.6.0",
+    "@nuxtjs/sitemap": "0.2.0",
+    "bulma": "0.7.2",
+    "nuxt": "2.3.4",
+    "vue-lazyload": "1.2.6"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.2",
-    "cross-env": "^5.1.4",
-    "datocms-client": "^0.5.2",
-    "eslint": "^5.0.0",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-loader": "^2.0.0",
-    "eslint-plugin-html": "^4.0.2",
-    "eslint-plugin-import": "^2.10.0",
-    "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-promise": "^3.7.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "ncp": "^2.0.0",
-    "node-sass": "^4.8.3",
-    "rimraf": "^2.6.2",
-    "sass-loader": "^7.0.1"
+    "babel-eslint": "10.0.1",
+    "cross-env": "5.2.0",
+    "datocms-client": "0.8.11",
+    "eslint": "5.12.0",
+    "eslint-config-standard": "12.0.0",
+    "eslint-loader": "2.1.1",
+    "eslint-plugin-html": "5.0.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-node": "8.0.1",
+    "eslint-plugin-promise": "4.0.1",
+    "eslint-plugin-standard": "4.0.0",
+    "ncp": "2.0.0",
+    "node-sass": "4.11.0",
+    "rimraf": "2.6.3",
+    "sass-loader": "7.1.0"
   }
 }

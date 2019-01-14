@@ -3,7 +3,7 @@
     <header class="navbar is-black">
       <site-header/>
     </header>
-    <main class="section">
+    <main>
       <nuxt/>
     </main>
     <footer class="footer">
