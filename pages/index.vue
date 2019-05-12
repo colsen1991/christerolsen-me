@@ -18,7 +18,7 @@
               I’m a Norwegian self-employed web developer, beer enthusiast, and traveller.
             </p>
             <p>
-              I have a <span class="has-text-info">bachelor’s degree</span> in software engineering, as well as 3 years of
+              I have a <span class="has-text-info">bachelor’s degree</span> in software engineering, as well as {{new Date().getFullYear() - 2014}} years of
               experience in the field. Vindir is the name of my company, and the website can be found <a
               href="https://www.vindir.no" target="_blank" rel="noopener nofollow">here</a> (in Norwegian).
             </p>
@@ -30,8 +30,7 @@
               mention it anyway.
             </p>
             <p>
-              Finished personal projects consists of this website,
-              as well as <a href="https://www.beeroclock.site" target="_blank" rel="noopener nofollow">The Beer O’Clock Clock</a>.
+              Finished personal projects consists of this website, as well as <a href="https://www.beeroclock.site" target="_blank" rel="noopener nofollow">The Beer O’Clock Clock</a>.
               My GitHub profile is also home to plenty of projects in various states. Lastly I have a good handful of closed source projects
               connected to my company, and the link to each one can be found <a href="https://www.vindir.no/referanser" target="_blank" rel="noopener, nofollow">here</a>.
             </p>
