@@ -1,5 +1,5 @@
 <template>
-  <div class="hero is-fullheight-with-navbar">
+  <div class="hero is-medium">
     <div class="hero-body">
       <div class="container content has-text-centered">
         <h1>Oooops! An Error Seem to Have Occurred!</h1>
