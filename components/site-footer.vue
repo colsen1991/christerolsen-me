@@ -1,12 +1,8 @@
 <template>
   <div class="container">
-
     <hr class="is-hidden-mobile">
-
     <div class="columns">
-
       <hr class="is-hidden-tablet">
-
       <div class="column has-text-centered">
         <a href="https://twitter.com/colsen1991" target="_blank" rel="noopener nofollow">twitter</a>&nbsp;
         <a href="https://www.facebook.com/colsen1991" target="_blank" rel="noopener nofollow">facebook</a>&nbsp;
