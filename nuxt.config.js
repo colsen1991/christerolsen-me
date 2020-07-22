@@ -1,7 +1,7 @@
-const isStatic = process.env.STATIC === 'true'
-const isStaging = process.env.STAGING === 'true'
+const isProduction = process.env.NODE_ENV === 'production'
 
 module.exports = {
+  target: 'static',
   css: [
     {src: './assets/style/index.scss', lang: 'sass'}
   ],
@@ -17,24 +17,13 @@ module.exports = {
     theme_color: '#FB5607',
     background_color: '#363636'
   },
-  modules: isStaging ? [
+  modules: isProduction ? [
     '@nuxtjs/pwa',
     '@nuxtjs/sitemap',
-    '@nuxtjs/axios',
-    '@nuxtjs/auth',
-    ['@nuxtjs/google-analytics', {ua: isStaging ? 'STAGING' : 'UA-107229265-2'}]
-  ] : [
-    '@nuxtjs/pwa',
-    '@nuxtjs/sitemap',
-    ['@nuxtjs/google-analytics', {ua: isStaging ? 'STAGING' : 'UA-107229265-2'}]
-  ],
+    ['@nuxtjs/google-analytics', {ua: 'UA-107229265-2'}]
+  ] : undefined,
   build: {
-    postcss: {
-      plugins: {
-        'postcss-custom-properties': false
-      }
-    },
-    extractCSS: true
+    extractCSS: isProduction
   },
   plugins: [
     './plugins/components',
@@ -51,15 +40,11 @@ module.exports = {
       {hid: 'description', name: 'description', content: 'Homepage of Christer Olsen, a Norwegian web developer'},
       {name: 'theme-color', content: '#FB5607'},
       {hid: 'og:title', property: 'og:title', content: 'Christer Olsen: Web Developer'},
-      {
-        hid: 'og:description',
-        property: 'og:description',
-        content: 'Homepage of Christer Olsen, a Norwegian web developer'
-      },
+      {hid: 'og:description', property: 'og:description', content: 'Homepage of Christer Olsen, a Norwegian web developer'},
       {hid: 'og:image', property: 'og:image', content: 'https://www.christerolsen.me/img/me-lg.png'},
       {hid: 'og:site_name', property: 'og:site_name', content: 'Christer Olsen: Web Developer'},
       {hid: 'twitter:image', property: 'twitter:image', content: 'https://www.christerolsen.me/img/me-lg.png'},
-      {name: 'robots', content: isStaging ? 'noindex, nofollow' : 'index, follow'}
+      {name: 'robots', content: 'index, follow'}
     ]
   },
   sitemap: {
@@ -67,24 +52,7 @@ module.exports = {
     hostname: 'https://www.christerolsen.me',
     cacheTime: 1000 * 60 * 15,
     exclude: [
-      '404',
-      'login',
-      'logout'
-    ],
-    generate: isStatic
+      '/404'
+    ]
   },
-  workbox: {
-    handleFetch: isStatic
-  },
-  router: isStaging ? {
-    middleware: ['auth']
-  } : undefined,
-  auth: isStaging ? {
-    strategies: {
-      auth0: {
-        domain: 'vindir.eu.auth0.com',
-        client_id: 'NScWDGH2tk9tP7sPZIYtHiD2KhwA1USH'
-      }
-    }
-  } : undefined
 }

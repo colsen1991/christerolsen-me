@@ -3,27 +3,6 @@
   max-height: 384px;
 }
 
-.is-flex.has-centered {
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.is-flex.direction-column {
-  flex-direction: column !important;
-}
-
-.small-vertical-section {
-  margin: 1.5rem 0;
-}
-
-.small-vertical-section:first-child {
-  margin-top: 0 !important;
-}
-
-.small-vertical-section:last-child {
-  margin-bottom: 0 !important;
-}
-
 @media screen and (max-width: 768px) {
   /* Has/is * mobile */
 }

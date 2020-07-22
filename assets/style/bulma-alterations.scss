@@ -31,14 +31,6 @@ $card-background-color: $black-ter;
 
 $footer-background-color: $grey-darker;
 
-.tags.is-marginless .tag {
-  margin-bottom: 0 !important;
-}
-
-.navbar-burger {
-  height: auto !important;
-}
-
 @media screen and (min-width: 1008px) {
   /* Has/is * desktop */
   .container {
