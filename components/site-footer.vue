@@ -17,7 +17,7 @@
 
       <div class="column has-text-centered">
         <p class="has-text-centered">
-          &copy; {{new Date().getFullYear()}}<br>
+          &copy; 2017<br>
           Christer Olsen
         </p>
       </div>
