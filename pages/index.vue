@@ -53,10 +53,6 @@
 </script>
 
 <style lang="scss" scoped>
-  .hero {
-    padding-top: 6rem;
-  }
-
   #img-intro {
     display: flex;
     align-items: center;
