@@ -9,22 +9,20 @@
     "npm": ">=6.14.4"
   },
   "scripts": {
-    "dev": "nuxt",
-    "production": "cross-env NODE_ENV=production nuxt build && nuxt export",
-    "test-serve": "nuxt serve"
+    "dev": "TARGET_ENV=development nuxt",
+    "build": "TARGET_ENV=production nuxt generate",
+    "start": "nuxt start"
   },
   "dependencies": {
     "@nuxtjs/google-analytics": "2.4.0",
-    "@nuxtjs/pwa": "2.6.0",
     "@nuxtjs/sitemap": "2.4.0",
     "bulma": "0.9.0",
-    "nuxt": "2.13.3",
+    "nuxt": "2.14.5",
     "vue-lazyload": "1.3.3"
   },
   "devDependencies": {
-    "cross-env": "7.0.2",
     "node-sass": "4.14.1",
-    "sass-loader": "9.0.2"
+    "sass-loader": "10.0.2"
   },
   "peerDependencies": {
     "@nuxt/vue-app": "*",

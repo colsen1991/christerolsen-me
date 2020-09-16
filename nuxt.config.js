@@ -1,27 +1,19 @@
-const isProduction = process.env.NODE_ENV === 'production'
+const isProduction = process.env.TARGET_ENV === 'production'
 
 module.exports = {
   target: 'static',
+  generate: {
+    fallback: true
+  },
   css: [
     {src: './assets/style/index.scss', lang: 'sass'}
   ],
   loading: {
     color: '#48E826'
   },
-  manifest: {
-    name: 'Christer Olsen: Web Developer',
-    short_name: 'CO: Webdev',
-    display: 'standalone',
-    description: 'Homepage of Christer Olsen, a Norwegian web developer',
-    orientation: 'any',
-    theme_color: '#FB5607',
-    background_color: '#363636'
-  },
-  modules: isProduction ? [
-    '@nuxtjs/pwa',
-    '@nuxtjs/sitemap',
-    ['@nuxtjs/google-analytics', {ua: 'UA-107229265-2'}]
-  ] : undefined,
+  modules: isProduction
+    ? ['@nuxtjs/sitemap', ['@nuxtjs/google-analytics', {id: 'UA-107229265-2'}]]
+    : undefined,
   build: {
     extractCSS: isProduction
   },
@@ -48,11 +40,6 @@ module.exports = {
     ]
   },
   sitemap: {
-    path: '/sitemap.xml',
-    hostname: 'https://www.christerolsen.me',
-    cacheTime: 1000 * 60 * 15,
-    exclude: [
-      '/404'
-    ]
-  },
+    hostname: 'https://www.christerolsen.me'
+  }
 }

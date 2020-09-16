@@ -13,4 +13,7 @@ $ npm run dev
 
 # build for production and serve dist/
 $ npm run build
+# then
+$ npm run start
+# or serve dist/ as http root
 ```
