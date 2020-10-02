@@ -29,13 +29,14 @@ module.exports = {
       {rel: 'author', href: '/humans.txt'}
     ],
     meta: [
-      {hid: 'description', name: 'description', content: 'Homepage of Christer Olsen, a Norwegian web developer'},
+      {hid: 'charset', charset: 'utf-8'},
+      {hid: 'viewport', name: 'viewport', content: 'width=device-width, initial-scale=1'},
       {name: 'theme-color', content: '#FB5607'},
       {hid: 'og:title', property: 'og:title', content: 'Christer Olsen: Web Developer'},
+      {hid: 'description', name: 'description', content: 'Homepage of Christer Olsen, a Norwegian web developer'},
       {hid: 'og:description', property: 'og:description', content: 'Homepage of Christer Olsen, a Norwegian web developer'},
       {hid: 'og:image', property: 'og:image', content: 'https://www.christerolsen.me/img/me-lg.png'},
       {hid: 'og:site_name', property: 'og:site_name', content: 'Christer Olsen: Web Developer'},
-      {hid: 'twitter:image', property: 'twitter:image', content: 'https://www.christerolsen.me/img/me-lg.png'},
       {name: 'robots', content: 'index, follow'}
     ]
   },
